@@ -16,7 +16,7 @@ return new class extends Migration
             $table->string('StudentName');
             $table->string('StudentEmail');
             $table->enum('StudentGender', ['0','1']);
-            $table->unsignedInteger('ClassRoomID'); 
+            $table->unsignedInteger('ClassRoomID');
             $table->foreign('ClassRoomID')->references('ClassRoomID')->on('ClassRooms')->onDelete('cascade');
         });
     }
